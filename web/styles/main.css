@@ -18,35 +18,53 @@ body{
 header{
   color: darkblue;
   font-weight: bold;
-  margin: 2em .5em;
+  margin: 2.5em 2.5em .5em;
+}
+
+main{
+  display: flex;
 }
 
 form{
-  display: block;
-  margin:auto;
+  margin: auto;
   width: 75%;
+}
+
+label{
+  display: inline-block;
+  padding-right: .5em;
+  order: 1;
+  text-align: right;
+}
+
+input{
+  display: inline-block;
+  order: 2;
+  width: 22em;
+}
+
+span{
+  display: inline-block;
+  order: 2;
+  width: 22em;
 }
 
 form>p{
   text-align: right;
 }
 
-label{
-  margin-left: -10em;
-  width: 50%
-}
-
-input{
-  width: 50%;
-}
-
 #submit{
-  margin-left: 10em;
+  margin-bottom: 1em;
+  margin-left: 11.5em;
   width: 10em;
 }
 
 footer{
   border-top: 2px darkblue solid;
   font-size: 1em;
+}
+
+footer>p{
+  margin-left: 2.5em;
 }
 

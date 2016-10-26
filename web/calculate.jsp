@@ -5,14 +5,20 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <title>JSP Page</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
-</html>
+
+<%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:import url="/includes/header.html" />
+
+    <label>Investment Amount:</label>
+    <span>${calculate.amount}</span><br>
+    
+    <label>Yearly Interest Rate:</label>
+    <span>${calculate.rate}</span><br>
+    
+    <label>Number of Years:</label>
+    <span>${calculate.years}</span><br>
+    
+    <label>Future Value:</label>
+    <span>${calculate.future}</span><br>
+
+<c:import url="/includes/footer.jsp" />
