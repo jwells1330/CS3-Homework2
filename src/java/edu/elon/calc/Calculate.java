@@ -54,7 +54,8 @@ public class Calculate extends HttpServlet {
             System.out.println("Email: " + years);
             
             Calculation calculation = new Calculation(investment, interestRate, years);
-
+            calculation.doInterestCalculation();
+            
             request.setAttribute("calculation", calculation);
             url = "/calculate.jsp";
             getServletContext().getRequestDispatcher(url).forward(request, response);

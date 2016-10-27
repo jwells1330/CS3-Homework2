@@ -5,15 +5,17 @@
  */
 package edu.elon.calc;
 
+import java.text.NumberFormat;
+
 /**
  *
  * @author Jacob_Wells
  */
 public class Calculation {
-    private int investment;
-    private int interest;
-    private int years;
-    private int finalAmount;
+    private double investment;
+    private double interest;
+    private double years;
+    private double finalAmount;
     
     public Calculation(){
         investment = 0;
@@ -21,26 +23,29 @@ public class Calculation {
         years = 0;
         finalAmount = 0;
     }
-    public Calculation(int investment, int interest, int years){
+    public Calculation(double investment, double interest, double years){
         this.investment = investment;
         this.interest = interest;
         this.years = years;
         finalAmount = 0;
     }
     public void doInterestCalculation(){
-        finalAmount = investment*(1+(interest*years));
+        finalAmount = investment*(Math.pow((1+(.01*interest)),years));
+        
     }
-    public int getInvestment(){
-        return investment;
+    public String getInvestment(){
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+        return currencyFormatter.format(investment);
     }
-    public int getInterest(){
+    public double getInterest(){
         return interest;
     }
     public int getYears(){
-        return years;
+        return (int)(years);
     }
-    public int getFinalAmount(){
-        return finalAmount;
+    public String getFinalAmount(){
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+        return currencyFormatter.format(finalAmount);
     }
     
 }
