@@ -10,17 +10,18 @@
 <c:import url="/includes/header.html" />
 
 <div id ="output">
+  <jsp:useBean id="calculation" scope="request" class="edu.elon.calc.Calculation" />
     <label>Investment Amount:</label>
-    <span>${calculation.investment}</span><br>
+    <span><jsp:getProperty name="calculation" property="investment" /></span><br>
     
     <label>Yearly Interest Rate:</label>
-    <span>${calculation.interest}</span><br>
+    <span><jsp:getProperty name="calculation" property="interest" /></span><br>
     
     <label>Number of Years:</label>
-    <span>${calculation.years}</span><br>
+    <span><jsp:getProperty name="calculation" property="years" /></span><br>
     
     <label>Future Value:</label>
-    <span>${calculation.finalAmount}</span><br>
+    <span><jsp:getProperty name="calculation" property="finalAmount" /></span><br>
 </div>
     
 <c:import url="/includes/footer.jsp" />
