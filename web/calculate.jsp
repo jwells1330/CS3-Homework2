@@ -9,6 +9,7 @@
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="/includes/header.html" />
 
+<div id ="output">
     <label>Investment Amount:</label>
     <span>${calculation.investment}</span><br>
     
@@ -20,5 +21,6 @@
     
     <label>Future Value:</label>
     <span>${calculation.finalAmount}</span><br>
-
+</div>
+    
 <c:import url="/includes/footer.jsp" />

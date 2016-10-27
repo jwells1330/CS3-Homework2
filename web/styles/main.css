@@ -30,6 +30,11 @@ form{
   width: 75%;
 }
 
+#output{
+  margin: auto;
+  width: 50%;
+}
+
 label{
   display: inline-block;
   padding-right: .5em;
@@ -43,11 +48,6 @@ input{
   width: 22em;
 }
 
-span{
-  display: inline-block;
-  order: 2;
-  width: 22em;
-}
 
 form>p{
   text-align: right;
@@ -66,5 +66,30 @@ footer{
 
 footer>p{
   margin-left: 2.5em;
+}
+
+@media screen and (max-width: 400px){
+
+    body{
+      width: 60%;
+    }
+    
+    h1, p{
+      font-size: .2em;
+    }
+    
+    input{
+      width: 90%;
+    }
+    
+    form>p{
+      text-align: left;
+    }
+    
+    #submit{
+      margin: 0 0;
+      padding: 0 0;
+      width: 75%;
+    }
 }
 
