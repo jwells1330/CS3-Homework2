@@ -10,15 +10,15 @@
 <c:import url="/includes/header.html" />
 
     <label>Investment Amount:</label>
-    <span>${calculate.amount}</span><br>
+    <span>${calculation.investment}</span><br>
     
     <label>Yearly Interest Rate:</label>
-    <span>${calculate.rate}</span><br>
+    <span>${calculation.interest}</span><br>
     
     <label>Number of Years:</label>
-    <span>${calculate.years}</span><br>
+    <span>${calculation.years}</span><br>
     
     <label>Future Value:</label>
-    <span>${calculate.future}</span><br>
+    <span>${calculation.finalAmount}</span><br>
 
 <c:import url="/includes/footer.jsp" />

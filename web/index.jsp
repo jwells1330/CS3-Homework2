@@ -8,7 +8,7 @@
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="/includes/header.html" />
 
-<form method="post" action="calculate.jsp">
+<form method="post" action="calculate">
   <input type="hidden" name="action" value="add">
   <p><label>Investment Amount</label><input name="amount" type="text" autofocus required/></p>
   <p><label>Yearly Interest Rate</label><input name="interest" type="text" required/></p>
