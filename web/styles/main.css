@@ -21,6 +21,18 @@ header{
   margin: 2.5em 2.5em .5em;
 }
 
+p{
+  margin-left: 2.5em;
+}
+
+body>p:first-of-type{
+  margin-bottom: 0;
+}
+
+body>p:last-of-type{
+  margin-top: 0;
+}
+
 main{
   display: flex;
 }
@@ -46,6 +58,11 @@ input{
   display: inline-block;
   order: 2;
   width: 22em;
+}
+
+
+span{
+  text-align: left;
 }
 
 
