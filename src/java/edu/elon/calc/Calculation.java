@@ -5,13 +5,14 @@
  */
 package edu.elon.calc;
 
+import java.io.Serializable;
 import java.text.NumberFormat;
 
 /**
  *
  * @author Jacob_Wells
  */
-public class Calculation {
+public class Calculation implements Serializable{
     private double investment;
     private double interest;
     private double years;
@@ -47,5 +48,16 @@ public class Calculation {
         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
         return currencyFormatter.format(finalAmount);
     }
-    
+    public void setInvestment(double investment){
+        this.investment = investment;
+    }
+    public void setInterest(double interest){
+        this.interest = interest;
+    }
+    public void setYears(double years){
+        this.years = years;
+    }
+    public void setFinalAmount(double finalAmount){
+        this.finalAmount = finalAmount;
+    }
 }
